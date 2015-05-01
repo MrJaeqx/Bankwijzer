@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bankwijzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Oe-cO-g3D">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Bankwijzer" id="KTu-oT-CbO"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-WR-Ma5">
+                                <rect key="frame" x="0.0" y="44" width="600" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WIm-wj-SaW"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Uol-uU-1u8">
+                                <rect key="frame" x="0.0" y="144" width="600" height="456"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bankCell" id="hez-TI-yVq">
+                                        <rect key="frame" x="140" y="278" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hez-TI-yVq" id="Q4I-D5-3qe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pTv-WR-Ma5" firstAttribute="leading" secondItem="3Oe-cO-g3D" secondAttribute="leading" id="Fr2-Yg-HKg"/>
+                            <constraint firstItem="pTv-WR-Ma5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fwr-ez-sXB"/>
+                            <constraint firstItem="Uol-uU-1u8" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="G1S-XL-Fg9"/>
+                            <constraint firstItem="Uol-uU-1u8" firstAttribute="trailing" secondItem="pTv-WR-Ma5" secondAttribute="trailing" id="KYV-1X-Nhu"/>
+                            <constraint firstItem="pTv-WR-Ma5" firstAttribute="trailing" secondItem="3Oe-cO-g3D" secondAttribute="trailing" id="MH8-Lg-mth"/>
+                            <constraint firstItem="Uol-uU-1u8" firstAttribute="leading" secondItem="pTv-WR-Ma5" secondAttribute="leading" id="hkp-JP-yYN"/>
+                            <constraint firstItem="3Oe-cO-g3D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mYG-ij-g5I"/>
+                            <constraint firstItem="pTv-WR-Ma5" firstAttribute="top" secondItem="3Oe-cO-g3D" secondAttribute="bottom" id="sN8-9d-W7h"/>
+                            <constraint firstAttribute="trailing" secondItem="pTv-WR-Ma5" secondAttribute="trailing" id="t5k-6D-qKZ"/>
+                            <constraint firstItem="Uol-uU-1u8" firstAttribute="top" secondItem="pTv-WR-Ma5" secondAttribute="bottom" id="w42-wp-yu6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="pTv-WR-Ma5" id="aa3-L3-f1E"/>
+                        <outlet property="table" destination="Uol-uU-1u8" id="Ar7-yy-cC9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="508"/>
+        </scene>
+        <!--vragen-->
+        <scene sceneID="pnO-r4-5Yk">
+            <objects>
+                <viewController restorationIdentifier="vragen" storyboardIdentifier="vragen" id="BOF-xa-N0b" userLabel="vragen" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ObZ-G4-deA"/>
+                        <viewControllerLayoutGuide type="bottom" id="CF1-1U-s7u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c8p-dc-BDV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdi-JY-Glr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Jouw keuzes" id="6Iy-Tg-1WT">
+                                        <barButtonItem key="leftBarButtonItem" title="Terug" id="ozh-bg-mXj">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="xop-DI-OLX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Start" id="eNV-lz-kZs">
+                                            <connections>
+                                                <segue destination="Klf-k9-OTF" kind="show" id="nET-LB-2pZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vragen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-m6-6Yr">
+                                <rect key="frame" x="22" y="69" width="110" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eML-sM-mln">
+                                <rect key="frame" x="22" y="120" width="556" height="290"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Waar moet een bank volgens jou extra aandacht aan besteden? Is dat aan mensenrechten, dierenwelzijn of klimaat?
+ 
+Je krijgt nu een aantal vragen en aan de hand daarvan zullen wij een bank zoeken die het best bij jou past.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tdi-JY-Glr" firstAttribute="leading" secondItem="c8p-dc-BDV" secondAttribute="leading" id="dRG-IW-Stn"/>
+                            <constraint firstItem="0pk-m6-6Yr" firstAttribute="leading" secondItem="c8p-dc-BDV" secondAttribute="leadingMargin" constant="6" id="gl1-BW-jkH"/>
+                            <constraint firstItem="Tdi-JY-Glr" firstAttribute="centerX" secondItem="eML-sM-mln" secondAttribute="centerX" id="io4-Lu-dlC"/>
+                            <constraint firstItem="CF1-1U-s7u" firstAttribute="top" secondItem="eML-sM-mln" secondAttribute="bottom" constant="190" id="lBb-ZX-cAB"/>
+                            <constraint firstItem="eML-sM-mln" firstAttribute="leading" secondItem="0pk-m6-6Yr" secondAttribute="leading" id="lFD-pB-jcB"/>
+                            <constraint firstAttribute="trailing" secondItem="Tdi-JY-Glr" secondAttribute="trailing" id="mn9-TE-p3D"/>
+                            <constraint firstItem="eML-sM-mln" firstAttribute="top" secondItem="0pk-m6-6Yr" secondAttribute="bottom" constant="8" symbolic="YES" id="nCO-xF-6fe"/>
+                            <constraint firstItem="Tdi-JY-Glr" firstAttribute="top" secondItem="c8p-dc-BDV" secondAttribute="top" id="qJx-Zy-xB2"/>
+                            <constraint firstItem="0pk-m6-6Yr" firstAttribute="top" secondItem="Tdi-JY-Glr" secondAttribute="bottom" constant="25" id="v4p-A6-cwT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chZ-U6-cmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="-245"/>
+        </scene>
+        <!--bankDetail-->
+        <scene sceneID="bvD-E8-bba">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0R-jx-2Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController restorationIdentifier="bankDetail" storyboardIdentifier="bankDetail" id="vxq-f3-O6C" userLabel="bankDetail" customClass="BankDetailView" customModule="Bankwijzer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tAd-Tl-fIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="LmC-9H-T9g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LbZ-qa-vYh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URd-zs-jni">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Bank overzicht" id="zfs-hg-z5z">
+                                        <barButtonItem key="leftBarButtonItem" title="Terug" id="nKm-fc-Aqj">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="7qB-AM-oPd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ASN Bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="XBi-ND-D55">
+                                <rect key="frame" x="0.0" y="44" width="600" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="5mc-gc-GZM"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hmx-mV-jYI">
+                                <rect key="frame" x="0.0" y="139" width="600" height="461"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bankDetailCell" id="Wts-hD-G8g">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wts-hD-G8g" id="QFI-6P-ycu">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="URd-zs-jni" secondAttribute="trailing" id="0eu-lu-lFO"/>
+                            <constraint firstItem="XBi-ND-D55" firstAttribute="trailing" secondItem="URd-zs-jni" secondAttribute="trailing" id="4F1-mD-G6j"/>
+                            <constraint firstItem="LmC-9H-T9g" firstAttribute="top" secondItem="hmx-mV-jYI" secondAttribute="bottom" id="5UE-Xz-T5R"/>
+                            <constraint firstItem="URd-zs-jni" firstAttribute="top" secondItem="LbZ-qa-vYh" secondAttribute="top" id="5mD-Px-HMI"/>
+                            <constraint firstItem="XBi-ND-D55" firstAttribute="top" secondItem="URd-zs-jni" secondAttribute="bottom" id="92H-lv-pbk"/>
+                            <constraint firstItem="XBi-ND-D55" firstAttribute="leading" secondItem="URd-zs-jni" secondAttribute="leading" id="GGW-oW-5fL"/>
+                            <constraint firstItem="XBi-ND-D55" firstAttribute="trailing" secondItem="hmx-mV-jYI" secondAttribute="trailing" id="Gkf-ce-iPc"/>
+                            <constraint firstItem="URd-zs-jni" firstAttribute="leading" secondItem="LbZ-qa-vYh" secondAttribute="leading" id="YR4-CU-czn"/>
+                            <constraint firstItem="hmx-mV-jYI" firstAttribute="top" secondItem="XBi-ND-D55" secondAttribute="bottom" id="eMl-64-P0k"/>
+                            <constraint firstItem="hmx-mV-jYI" firstAttribute="leading" secondItem="XBi-ND-D55" secondAttribute="leading" id="mlP-ZQ-dNP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="hmx-mV-jYI" id="c2F-ne-nLY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1359" y="-237"/>
+        </scene>
+        <!--Queston View-->
+        <scene sceneID="W6V-hx-de5">
+            <objects>
+                <viewController id="Klf-k9-OTF" customClass="QuestonView" customModule="Bankwijzer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gxG-pC-Ub4"/>
+                        <viewControllerLayoutGuide type="bottom" id="rDs-r8-yYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="96g-gR-Mxn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Milieu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PV-tS-NcB">
+                                <rect key="frame" x="22" y="69" width="306" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hoe belangrijk is het mileu voor je?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBO-3V-e0g">
+                                <rect key="frame" x="22" y="120" width="395" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-Ef-9Ze">
+                                <rect key="frame" x="22" y="149" width="100" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="LVj-Qj-akA"/>
+                                    <constraint firstAttribute="width" constant="100" id="lyW-b4-iRa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1l0-6d-z67">
+                                <rect key="frame" x="182" y="149" width="100" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="17b-1A-gxp"/>
+                                    <constraint firstAttribute="width" constant="100" id="xwp-Pb-Baz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-kG-iOh">
+                                <rect key="frame" x="342" y="149" width="100" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="Uh3-J7-3kK"/>
+                                    <constraint firstAttribute="width" constant="100" id="crb-xe-6Uj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOF-NO-4KO">
+                                <rect key="frame" x="196" y="455" width="94" height="30"/>
+                                <state key="normal" title="Terug (debug)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="1aD-5Y-HxS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgBad" destination="7Ip-Ef-9Ze" id="XcN-T7-p1f"/>
+                        <outlet property="imgGood" destination="NmD-kG-iOh" id="Dmk-C9-bcy"/>
+                        <outlet property="imgNeutral" destination="1l0-6d-z67" id="Oh5-rR-Uw5"/>
+                        <outlet property="subject" destination="1PV-tS-NcB" id="oHw-S3-faD"/>
+                        <outlet property="subtext" destination="eBO-3V-e0g" id="dMI-fB-ZE0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAC-vp-ZHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="-237"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.jpg" width="101" height="97"/>
+        <image name="2.jpg" width="101" height="97"/>
+        <image name="3.jpg" width="101" height="97"/>
+        <image name="ASN Bank.png" width="115" height="90"/>
+        <image name="check.png" width="500" height="100"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1aD-5Y-HxS"/>
+    </inferredMetricsTieBreakers>
+</document>
